@@ -1,0 +1,41 @@
+{% extends '../layouts/login' %}
+{% block content %}
+
+<div class="login-box-body">
+  <form class="login-form" id="login-form" method="POST" action="/admin/dang-nhap">
+    {% if old('error') %}
+      <div class="alert alert-danger">{{old('error')}}</div>
+    {% endif %}
+    {% if old('errors') %}
+    <div class="alert alert-danger">
+      {% for error in old('errors') %}
+      <li> {{ error.message }} </li>
+      {% endfor %}
+    </div>
+    {% endif %}
+  {{ csrfField }}
+  <h4 class="mbl"> Đăng nhập</h4>
+  <div class="form-group field-loginform-username">
+    <div class="form-group has-feedback">
+      <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      {{ form.text('email', '', {class: 'form-control',type:'text',placeholder:'Email'}) }}
+    </div>
+    <div class="form-group has-feedback">
+      <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      {{ form.password('password','',{class:'form-control',type:'password',placeholder:'Password'}) }}
+    </div>
+    <div class="form-group field-loginform-rememberme ">
+      <div class="checkbox">
+        <label for="loginform-rememberme">
+          <input type="checkbox" id="loginform-rememberme" name="LoginForm[rememberMe]" value="1" checked="">
+          Remember Me
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-success btn-block" name="login-button">Login</button>
+    </div>
+  </div>
+  </form>
+</div>
+{% endblock %}

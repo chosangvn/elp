@@ -1,0 +1,71 @@
+.page-login .outer {
+  display: table;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.page-login .outer .middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.page-login .outer .middle .inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+}
+
+.page-login .outer .middle .inner .header {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.page-login .outer .middle .inner .header .logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.page-login .outer .middle .inner .login-form {
+  padding: 20px 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  color: #FFFFFF;
+}
+.mbl, .mvl, .mal {
+  margin-bottom: 20px !important;
+}
+.page-login .outer .middle .inner .login-form .form-group input {
+  border-color: rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  color: #333;
+  border-radius:3px
+}
+
+.page-login .outer .middle .inner .login-form hr {
+  border-top-color: rgba(0, 0, 0, 0.35);
+}
+
+.page-login #particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #6d2382;
+  display: table;
+  position: absolute;
+}
+
+@media (max-width: 320px) {
+  .inner {
+    width: 280px !important;
+  }
+}
+.login-box-body .form-control-feedback {
+  left: 0;
+}
+.login-box-body .has-feedback .form-control{
+  padding:0 0 0 42.5px;
+}
